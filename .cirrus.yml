@@ -6,6 +6,6 @@ task:
     WD: $CIRRUS_WORKING_DIR
   test_script:
     - echo %WD%
-    - echo %CIRRUS_WORKING_DIR%
-    - ps: ls
+    - echo %CIRRUS_SHELL%
+    - echo $CIRRUS_WORKING_DIR
     - ls
