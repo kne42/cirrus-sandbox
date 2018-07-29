@@ -5,6 +5,7 @@ task:
     CIRRUS_SHELL: powershell
     WD: $CIRRUS_WORKING_DIR
   test_script:
-    - echo $WD
+    - echo %WD%
+    - echo %CIRRUS_WORKING_DIR%
     - ps: ls
     - ls
