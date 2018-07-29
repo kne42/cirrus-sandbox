@@ -2,10 +2,7 @@ task:
   windows_container:
     image: cirrusci/windowsservercore:2016
   env:
-    CIRRUS_SHELL: powershell
     WD: $CIRRUS_WORKING_DIR
   test_script:
     - echo %WD%
     - echo %CIRRUS_SHELL%
-    - echo $CIRRUS_WORKING_DIR
-    - ls
