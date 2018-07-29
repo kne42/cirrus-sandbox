@@ -1,0 +1,9 @@
+task:
+  windows_container:
+    image: cirrusci/windowsservercore:2016
+  env:
+    CIRRUS_SHELL: powershell
+    WD: $CIRRUS_WORKING_DIR
+  test_script:
+    - ls
+    - echo $WD
