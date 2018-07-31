@@ -2,7 +2,11 @@ task:
   windows_container:
     image: cirrusci/windowsservercore:2016
   env:
-    WD: $CIRRUS_WORKING_DIR
+    CIRRUS_SHELL: powershell
   test_script:
-    - echo %WD%
-    - echo %CIRRUS_SHELL%
+    - $test = "wer"
+    - echo $test
+    - foreach ($var in $env) {
+        New-Variable -Name "$($var)" -Value "test" -Force
+      }
+    - echo $CIRRUS_SHELL
