@@ -10,3 +10,4 @@ task:
         New-Variable -Name "$($var)" -Value "test" -Force
       }
     - echo $CIRRUS_SHELL
+NO
